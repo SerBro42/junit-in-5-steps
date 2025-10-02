@@ -9,16 +9,21 @@ class MyMathTest {
 	//Absence of failure is success
 	//Test condition or assert
 	
+	private MyMath math = new MyMath();
+
+	
 	@Test
-	void test() {
+	void test_ShouldReturn6() {
 		
-		int[] numbers = {1,2,3};
+		assertEquals(6, math.calculateSum(new int[] {1,2,3}));
+		System.out.println(math.calculateSum(new int[] {1,2,3}));
+	}
+	
+	@Test
+	void test_ShouldReturnZero_whenArrayLengthIsZero() {
 		
-		var math = new MyMath();
-		int result = math.calculateSum(numbers);
-		int expectedResult = 6;
-		assertEquals(expectedResult, result);
-		System.out.println(result);
+		assertEquals(0, math.calculateSum(new int[] {}));
+		System.out.println(math.calculateSum(new int[] {}));
 	}
 
 }
