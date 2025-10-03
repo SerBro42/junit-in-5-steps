@@ -10,21 +10,25 @@ import org.junit.jupiter.api.Test;
 
 class MyBeforeAfterTest {
 	
+	//Will be executed once at the very beginning of the execution
 	@BeforeAll
 	static void beforeAll() {
 		System.out.println("BeforeAll");
 	}
 	
+	//Will be executed before every single test
 	@BeforeEach
 	void beforeEach() {
 		System.out.println("BeforeEach");
 	}
 	
+	//Will be executed after every single test
 	@AfterEach
 	void afterEach() {
 		System.out.println("AfterEach");
 	}
 	
+	//Will be executed once at the very end of the execution
 	@AfterAll
 	static void afterAll() {
 		System.out.println("AfterAll");
