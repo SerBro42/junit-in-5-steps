@@ -11,16 +11,15 @@ class MyMathTest {
 	
 	private MyMath math = new MyMath();
 
-	
 	@Test
-	void test_ShouldReturn6() {
+	void Should_Return6() {
 		
 		assertEquals(6, math.calculateSum(new int[] {1,2,3}));
 		System.out.println(math.calculateSum(new int[] {1,2,3}));
 	}
 	
 	@Test
-	void test_ShouldReturnZero_whenArrayLengthIsZero() {
+	void Should_ReturnZero_whenArrayLengthIsZero() {
 		
 		assertEquals(0, math.calculateSum(new int[] {}));
 		System.out.println(math.calculateSum(new int[] {}));
